@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Calculations</title>
+  </head>
+  <body>
+    <div id="sumOutput"></div>
+
+    <h2>Count Even and Odd Numbers Between 10 to 55</h2>
+    <div id="countOutput"></div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let sumOutput = document.getElementById("sumOutput");
+        let prevNum = 0;
+
+        let countOutput = document.getElementById("countOutput");
+        let evenCount = 0,
+          oddCount = 0;
+
+        for (let i = 10; i <= 55; i++) {
+          if (i % 2 === 0) {
+            evenCount++;
+          } else {
+            oddCount++;
+          }
+        }
+
+        let evenResult = "Even Numbers Count: " + evenCount;
+        let oddResult = "Odd Numbers Count: " + oddCount;
+
+        let evenP = document.createElement("p");
+        evenP.textContent = evenResult;
+        countOutput.appendChild(evenP);
+
+        let oddP = document.createElement("p");
+        oddP.textContent = oddResult;
+        countOutput.appendChild(oddP);
+      });
+    </script>
+  </body>
+</html>

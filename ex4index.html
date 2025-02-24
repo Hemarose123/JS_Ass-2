@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Calculations</title>
+  </head>
+  <body>
+    <h2>Sum of Current and Previous Number</h2>
+    <div id="sumOutput"></div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let sumOutput = document.getElementById("sumOutput");
+        let prevNum = 0;
+
+        for (let i = 0; i < 10; i++) {
+          let sum = i + prevNum;
+          let result =
+            "Current Number: " +
+            i +
+            ", Previous Number: " +
+            prevNum +
+            ", Sum: " +
+            sum;
+
+          let p = document.createElement("p");
+          p.textContent = result;
+          sumOutput.appendChild(p);
+
+          prevNum = i;
+        }
+      });
+    </script>
+  </body>
+</html>
