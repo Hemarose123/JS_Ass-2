@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Filter Negative Numbers</title>
+  </head>
+  <body>
+    <h2>Filter Negative Numbers</h2>
+    <p id="output"></p>
+
+    <script>
+      function filterNegativeNumbers(arr) {
+        return arr.filter((num) => num < 0);
+      }
+      let arr = [5, 2, -7, 3, -2, -1];
+      let result = filterNegativeNumbers(arr);
+
+      document.getElementById("output").innerText =
+        "Filtered Negative Numbers: " + result;
+    </script>
+  </body>
+</html>

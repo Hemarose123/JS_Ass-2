@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Replace Odd Numbers</title>
+  </head>
+  <body>
+    <h2>Replace Odd Numbers with Zero</h2>
+    <p id="output"></p>
+
+    <script>
+      function replaceOddWithZero(arr) {
+        return arr.map((num) => (num % 2 !== 0 ? 0 : num));
+      }
+
+      let arr = [5, 10, 15, 20, 22, 23];
+      let result = replaceOddWithZero(arr);
+
+      document.getElementById("output").innerText =
+        "Replaced Odd Numbers with Zero: " + result;
+    </script>
+  </body>
+</html>

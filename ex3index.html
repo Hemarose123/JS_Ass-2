@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sum of User Integers</title>
+  </head>
+  <body>
+    <h2>Sum of User-Entered Integers</h2>
+    <p id="output"></p>
+
+    <script>
+      function sumUserIntegers() {
+        let sum = 0,
+          num;
+        do {
+          num = parseInt(prompt("Enter a number (0 to stop):"), 10);
+          sum += num;
+        } while (num !== 0);
+
+        document.getElementById("output").innerText =
+          "Total Sum of Entered Numbers: " + sum;
+      }
+      sumUserIntegers();
+    </script>
+  </body>
+</html>
